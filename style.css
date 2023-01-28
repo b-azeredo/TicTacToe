@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    height: 97vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 38, 69);
+    flex-direction: column;
+}
+
+h1{
+    font-size: 2em;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+div#areaJogo{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.quadrado{
+    width: 33%;
+    height: 33%;
+    background-color: rgb(99, 99, 154);
+    text-align: center;
+    font-size: 7em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+button{
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgb(99, 99, 154);
+    color: white;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(50, 50, 115);
+}
+
+div#stop{
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+}
