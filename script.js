@@ -54,4 +54,15 @@ area.addEventListener("click", function(){
     // Diagonal O
     if (quadrado[0].textContent == "O" && quadrado[4].textContent == "O" && quadrado[8].textContent == "O"){winner("O");}
     else if (quadrado[2].textContent == "O" && quadrado[4].textContent == "O" && quadrado[6].textContent == "O"){winner("O");}
+    let contador30 = 0;
+    for (let c = 0; c<9; c++){
+        if(quadrado[c].textContent != ""){
+            contador30++;
+        } 
+    }
+    if (contador30 == 9){
+        document.getElementById("winMessage").textContent = `Empate`;
+    } else{
+        contador30 = 0;
+    }
 });
