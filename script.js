@@ -45,24 +45,26 @@ area.addEventListener("click", function(){
     else if (quadrado[1].textContent == "X" && quadrado[4].textContent == "X" && quadrado[7].textContent == "X"){winner("X");}
     else if (quadrado[2].textContent == "X" && quadrado[5].textContent == "X" && quadrado[8].textContent == "X"){winner("X");}
     // Vertical O
-    if (quadrado[0].textContent == "O" && quadrado[3].textContent == "O" && quadrado[6].textContent == "O"){winner("O");}
+    else if (quadrado[0].textContent == "O" && quadrado[3].textContent == "O" && quadrado[6].textContent == "O"){winner("O");}
     else if (quadrado[1].textContent == "O" && quadrado[4].textContent == "O" && quadrado[7].textContent == "O"){winner("O");}
     else if (quadrado[2].textContent == "O" && quadrado[5].textContent == "O" && quadrado[8].textContent == "O"){winner("O");}
     // Diagonal X
-    if (quadrado[0].textContent == "X" && quadrado[4].textContent == "X" && quadrado[8].textContent == "X"){winner("X");}
+    else if (quadrado[0].textContent == "X" && quadrado[4].textContent == "X" && quadrado[8].textContent == "X"){winner("X");}
     else if (quadrado[2].textContent == "X" && quadrado[4].textContent == "X" && quadrado[6].textContent == "X"){winner("X");}
     // Diagonal O
-    if (quadrado[0].textContent == "O" && quadrado[4].textContent == "O" && quadrado[8].textContent == "O"){winner("O");}
+    else if (quadrado[0].textContent == "O" && quadrado[4].textContent == "O" && quadrado[8].textContent == "O"){winner("O");}
     else if (quadrado[2].textContent == "O" && quadrado[4].textContent == "O" && quadrado[6].textContent == "O"){winner("O");}
-    let contador30 = 0;
-    for (let c = 0; c<9; c++){
-        if(quadrado[c].textContent != ""){
-            contador30++;
-        } 
-    }
-    if (contador30 == 9){
-        document.getElementById("winMessage").textContent = `Empate`;
-    } else{
-        contador30 = 0;
+    else{
+        let contador30 = 0;
+        for (let c = 0; c<9; c++){
+            if(quadrado[c].textContent != ""){
+                contador30++;
+            } 
+        }
+        if (contador30 == 9){
+            document.getElementById("winMessage").textContent = `Empate`;
+        } else{
+            contador30 = 0;
+        }
     }
 });
